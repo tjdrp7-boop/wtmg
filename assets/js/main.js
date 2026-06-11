@@ -6,7 +6,7 @@
      Google Apps Script 배포 후 받은 웹앱 URL을 붙여넣으세요.
      비워두면(''): 데모 모드 — 실제 전송 없이 성공 화면만 표시.
      ========================================================= */
-  var ENDPOINT = ''; // 예: 'https://script.google.com/macros/s/AKfy.../exec'
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyy-FRFT5DqVXndaeIhcTtP2kwIZweKiQBjRbz0BP1pSzY9Ii5yH6t1oeXVNU2PNkRqPA/exec';
 
   var qp = new URLSearchParams(location.search);
   var body = document.body;
