@@ -11,24 +11,34 @@
   var qp = new URLSearchParams(location.search);
   var body = document.body;
   var cards = document.querySelectorAll('.switch-card');
-  var trackWealth = document.getElementById('track-wealth');
-  var trackSelf = document.getElementById('track-self');
   var trackField = document.getElementById('trackField');
   var firstInterest = document.getElementById('i1');
 
-  /* ---------- 트랙(자산가/자영업자) 전환 ---------- */
+  /* 트랙 정의: 분기 카드 data-track 값 ↔ 섹션 id ↔ body 클래스 ↔ 폼 값 */
+  var TRACKS = {
+    pro:  { el: document.getElementById('track-pro'),  cls: 'track-pro',  label: '전문직' },
+    corp: { el: document.getElementById('track-corp'), cls: 'track-corp', label: '법인' },
+    self: { el: document.getElementById('track-self'), cls: 'track-self', label: '자영업자' }
+  };
+  // 하위호환: 기존 ?track=wealth 진입은 전문직으로 매핑
+  var ALIAS = { wealth: 'pro' };
+
+  /* ---------- 트랙(전문직/법인/자영업) 전환 ---------- */
   function setTrack(track, doScroll) {
-    var isWealth = track !== 'self';
-    body.classList.toggle('track-wealth', isWealth);
-    body.classList.toggle('track-self', !isWealth);
-    trackWealth.classList.toggle('show', isWealth);
-    trackSelf.classList.toggle('show', !isWealth);
+    track = ALIAS[track] || track;
+    if (!TRACKS[track]) track = 'pro';
+    Object.keys(TRACKS).forEach(function (key) {
+      var t = TRACKS[key];
+      var on = key === track;
+      body.classList.toggle(t.cls, on);
+      if (t.el) t.el.classList.toggle('show', on);
+    });
     cards.forEach(function (c) {
-      var on = c.getAttribute('data-track') === (isWealth ? 'wealth' : 'self');
+      var on = c.getAttribute('data-track') === track;
       c.classList.toggle('active', on);
       c.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
-    if (trackField) trackField.value = isWealth ? '전문직/법인' : '자영업자';
+    if (trackField) trackField.value = TRACKS[track].label;
     if (firstInterest) firstInterest.checked = true;
     if (doScroll) {
       var p = document.getElementById('principle');
@@ -42,9 +52,9 @@
     });
   });
 
-  // 광고 랜딩 분리: ?track=self 또는 ?track=wealth 로 진입하면 자동 분기
+  // 광고 랜딩 분리: ?track=pro|corp|self (또는 구버전 wealth) 로 진입하면 자동 분기
   var qtrack = qp.get('track');
-  if (qtrack === 'self' || qtrack === 'wealth') setTrack(qtrack, false);
+  if (qtrack) setTrack(qtrack, false);
 
   /* ---------- 폼 제출 ---------- */
   var form = document.getElementById('leadForm');

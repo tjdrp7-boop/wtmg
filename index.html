@@ -23,7 +23,7 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="track-wealth">
+<body class="track-pro">
 
 <!-- 유틸 바 -->
 <div class="util">
@@ -60,10 +60,6 @@
       <div class="hero-portrait imgslot">
         <div class="ph">윤미현 프로필 사진<code>profile.jpg</code></div>
         <img src="assets/img/profile.jpg" alt="윤미현 마스터플래너" onerror="this.style.display='none'" />
-        <div class="mdrt imgslot">
-          <div class="ph">2024<br>MDRT<code>mdrt.png</code></div>
-          <img src="assets/img/mdrt.png" alt="2024 MDRT" onerror="this.style.display='none'" />
-        </div>
       </div>
     </div>
   </div>
@@ -95,16 +91,27 @@
 <div class="switcher">
   <div class="wrap">
     <div class="q">먼저, 어떤 상담을 원하시나요?</div>
-    <div class="switch-cards">
-      <button class="switch-card active" data-track="wealth" aria-pressed="true">
-        <div class="t">전문직 · 법인 대표님</div>
-        <div class="d">상속세 재원 마련, 법인 CEO 리스크·세무, 자산 분산이 필요하신 분 (의사·전문직·법인 대표)</div>
-        <div class="go">이 상담 보기</div>
+    <div class="switch-cards switch-cards-3">
+      <button class="switch-card active" data-track="pro" aria-pressed="true">
+        <div class="t">전문직 고객</div>
+        <div class="st">의사 · 변호사 · 세무사 · 회계사</div>
+        <div class="d">상속세, 자녀 승계, 은퇴 준비까지. 바쁜 일정 속에서 놓치기 쉬운 자산관리와 상속세 재원 마련 전략을 함께 점검합니다.</div>
+        <div class="kw"><span>상속세 진단</span><span>자녀 증여 전략</span><span>종신보험 활용</span><span>은퇴설계</span><span>자산 분산 관리</span></div>
+        <div class="go">전문직 상담 보기</div>
+      </button>
+      <button class="switch-card" data-track="corp" aria-pressed="false">
+        <div class="t">법인 대표님</div>
+        <div class="st">제조업 · 유통업 · IT · 중소기업 CEO</div>
+        <div class="d">회사의 성장이 곧 대표님의 리스크가 되지 않도록. CEO 유고 리스크부터 미처분이익잉여금, 가업승계까지 기업 전체 관점에서 검토합니다.</div>
+        <div class="kw"><span>CEO 리스크 진단</span><span>법인 자금 활용 전략</span><span>미처분이익잉여금</span><span>가지급금 정리</span><span>가업승계 및 기업승계</span></div>
+        <div class="go">법인 컨설팅 보기</div>
       </button>
       <button class="switch-card" data-track="self" aria-pressed="false">
         <div class="t">자영업 사장님</div>
-        <div class="d">사업장 화재보험, 건강보험 점검, 노후 설계가 필요하신 매장·사업장 사장님</div>
-        <div class="go">이 상담 보기</div>
+        <div class="st">매장 · 음식점 · 학원 · 병원</div>
+        <div class="d">사업장과 사장님의 삶을 함께 지키는 리스크 관리와 은퇴 설계.</div>
+        <div class="kw"><span>사업장 화재보험</span><span>건강보험 점검</span><span>보험료 최적화</span><span>노후 준비</span><span>은퇴설계</span></div>
+        <div class="go">사장님 상담 보기</div>
       </button>
     </div>
   </div>
@@ -128,12 +135,12 @@
   </div>
 </section>
 
-<!-- ============ 트랙 A: 전문직·법인 ============ -->
-<div class="track show" id="track-wealth">
+<!-- ============ 트랙 A: 전문직 고객 ============ -->
+<div class="track show" id="track-pro">
 
   <section class="pain">
     <div class="wrap">
-      <span class="eyebrow">상속 · 법인 자산</span>
+      <span class="eyebrow">상속 · 자산 승계</span>
       <h2>열심히 번 자산,<br>잘 지키고 잘 물려주는 일</h2>
       <p class="lead">진료실, 법정, 사무실에서 바쁜 시간을 보내는 동안
         자산은 늘어나지만 상속세와 승계 고민도 함께 커집니다. 
@@ -189,10 +196,10 @@
       <div class="center"><span class="eyebrow">진행 흐름</span>
         <h2 style="font-size:clamp(24px,3.8vw,32px)">자산을 지키고 물려주는 설계, 이렇게 진행합니다</h2></div>
       <ol>
-        <li><b>자산 · 세금 현황 진단</b><span>예상 상속세, 법인 리스크를 데이터로 시뮬레이션해 현황을 정리합니다.</span></li>
-        <li><b>WMC 1:1 맞춤 컨설팅</b><span>세무·법률·금융 전문위원과 함께 협진 형태로 점검합니다.</span></li>
-        <li><b>재원 · 구조 설계</b><span>상속세 재원, 법인 방어 자금, 비용처리 구조를 설계합니다.</span></li>
-        <li><b>분산 · 승계 & 사후관리</b><span>증권사 협업 분산투자, 가족법인 승계, 세법 변화에 맞춘 정기 점검까지.</span></li>
+        <li><b>자산 현황 진단</b><span>부동산, 금융자산, 예상 상속세 규모를 점검합니다.</span></li>
+        <li><b>WMC 맞춤 컨설팅</b><span>세무·법률·금융 전문가와 함께 현재 상황을 검토합니다.</span></li>
+        <li><b>승계 전략 설계</b><span>상속세 재원, 증여 전략, 은퇴 계획을 설계합니다.</span></li>
+        <li><b>정기 점검</b><span>자산 변화와 세법 개정에 맞춰 주기적으로 업데이트합니다.</span></li>
       </ol>
     </div>
   </section>
@@ -201,7 +208,7 @@
     <div class="wrap">
       <div class="center"><span class="eyebrow">실제 상담 사례</span>
         <h2 style="font-size:clamp(24px,3.8vw,32px)">현장에서 있었던 이야기</h2></div>
-      <div class="cases">
+      <div class="cases" style="grid-template-columns:1fr; max-width:680px; margin-left:auto; margin-right:auto;">
         <div class="case-card">
           <span class="case-tag">강남 정형외과 원장님</span>
           <h3>상속세 재원과 노후 자산을 함께</h3>
@@ -212,6 +219,100 @@
             <li>증권사 파트너와 자산 분산, 가족법인 설립까지 원스톱 지원</li>
           </ul>
         </div>
+      </div>
+      <p class="case-disc">※ 실제 상담 사례를 고객 동의 하에 각색·요약했으며, 인물은 가명입니다. 결과는 개인별 상황에 따라 달라질 수 있습니다.</p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">대면 미팅 특전</span>
+        <h2 style="font-size:clamp(24px,3.8vw,32px)">상담 시 드리는 혜택</h2></div>
+      <div class="perk-grid">
+        <div class="perk"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><div><b>달러북 제공</b><span>10달러 상당</span></div></div>
+        <div class="perk"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><div><b>원어민 레벨테스트</b><span>북미권 영어 원어민 무료</span></div></div>
+        <div class="perk"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><div><b>VIP센터 세미나 초대</b><span>전문가 세미나</span></div></div>
+        <div class="perk"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><div><b>세무 전문위원 1:1</b><span>커스텀 미팅</span></div></div>
+        <div class="perk"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><div><b>홀인원 필드케어</b><span>홀인원 달성 시 (계약 성사 시)</span></div></div>
+      </div>
+      <p class="perk-note">※ 일부 특전은 계약 성사 시 제공됩니다.</p>
+    </div>
+  </section>
+</div><!-- /track-pro -->
+
+<!-- ============ 트랙 B: 법인 대표님 ============ -->
+<div class="track" id="track-corp">
+
+  <section class="pain">
+    <div class="wrap">
+      <span class="eyebrow">법인 · CEO 리스크</span>
+      <h2>회사를 키우는 만큼 중요한,<br>회사를 지키는 일</h2>
+      <p class="lead">회사가 성장할수록 매출뿐 아니라 세금과 리스크도 함께 커집니다.
+        대표 개인의 문제를 넘어 기업 승계, CEO 리스크, 미처분이익잉여금까지
+        기업 전체 관점에서 점검합니다.</p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">이런 점을 함께 봅니다</span>
+        <h2 style="font-size:clamp(24px,3.8vw,32px)">상품 판매가 아니라, 구조 설계</h2></div>
+      <div class="grid3">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>CEO 유고 리스크</h3>
+          <p>대표 부재 시 대출, 운영자금, 지분 문제는 기업에 큰 영향을 줄 수 있습니다. 법인 자금과 보험 구조를 활용해 기업 방어 전략을 설계합니다.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21V4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v17"/><path d="M15 21V9h3a1 1 0 0 1 1 1v11"/><line x1="9" y1="7" x2="12" y2="7"/><line x1="9" y1="11" x2="12" y2="11"/><line x1="9" y1="15" x2="12" y2="15"/></svg></div><h3>미처분이익잉여금 · 가지급금</h3>
+          <p>회사가 성장할수록 미처분이익잉여금과 가지급금 문제가 발생할 수 있습니다. 향후 기업승계와 세금 부담을 고려하여 출구 전략을 검토합니다.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>가업승계 · 기업승계</h3>
+          <p>기업은 대표의 인생 작품입니다. 다음 세대로 이어질 수 있도록 지분, 세금, 경영권을 함께 고려한 승계 전략을 설계합니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="trust-media">
+        <div class="lecture imgslot">
+          <div class="ph">윤미현 강의 사진<code>lecture.jpg</code></div>
+          <img src="assets/img/lecture.jpg" alt="윤미현 마스터플래너 강의 모습" onerror="this.style.display='none'" />
+        </div>
+        <div>
+          <span class="eyebrow">왜 윤미현인가</span>
+          <h2 style="font-size:clamp(24px,3.8vw,32px)">혼자가 아니라,<br>VIP 전문가 팀과 함께</h2>
+          <p class="lead" style="margin-top:16px">글로벌웰스센터의 세무·법률·금융 전문위원,
+            그리고 대형 증권사 파트너와 공조해 1:1 맞춤 컨설팅을 진행합니다. 기업 진단부터
+            방어 구조 설계, 승계·사후관리까지 함께합니다.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">20년 경력</div><div class="l">20년 이상 자산관리 경력 보유</div></div>
+        <div class="stat"><div class="n">COT·MDRT</div><div class="l">공인 자격 이력</div></div>
+        <div class="stat"><div class="n">달러보험</div><div class="l">전문가과정 이수</div></div>
+        <div class="stat"><div class="n">글로벌웰스센터</div><div class="l">전문가 팀 1:1</div></div>
+      </div>
+      <div class="experts">
+        <span>세무사</span><span>변호사</span><span>부동산 감정평가사</span><span>금융·증권 전문가</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft struct">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">진행 흐름</span>
+        <h2 style="font-size:clamp(24px,3.8vw,32px)">기업을 지키고 물려주는 설계, 이렇게 진행합니다</h2></div>
+      <ol>
+        <li><b>법인 현황 진단</b><span>매출, 대출, 지분, 미처분이익잉여금을 분석합니다.</span></li>
+        <li><b>WMC 전문가 컨설팅</b><span>세무·법률·금융 전문가가 기업 구조를 함께 검토합니다.</span></li>
+        <li><b>기업 방어 구조 설계</b><span>CEO 리스크, 법인 자금 활용, 비용처리 구조를 설계합니다.</span></li>
+        <li><b>승계 및 사후관리</b><span>가업승계, 지분 이전, 세법 변화에 맞춘 정기 점검을 진행합니다.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">실제 상담 사례</span>
+        <h2 style="font-size:clamp(24px,3.8vw,32px)">현장에서 있었던 이야기</h2></div>
+      <div class="cases" style="grid-template-columns:1fr; max-width:680px; margin-left:auto; margin-right:auto;">
         <div class="case-card">
           <span class="case-tag">제조 법인 대표님</span>
           <h3>CEO 리스크와 세무를 한 번에</h3>
@@ -241,9 +342,9 @@
       <p class="perk-note">※ 일부 특전은 계약 성사 시 제공됩니다.</p>
     </div>
   </section>
-</div><!-- /track-wealth -->
+</div><!-- /track-corp -->
 
-<!-- ============ 트랙 B: 자영업자 ============ -->
+<!-- ============ 트랙 C: 자영업자 ============ -->
 <div class="track" id="track-self">
 
   <section class="pain">
@@ -303,10 +404,10 @@
       <div class="center"><span class="eyebrow">진행 흐름</span>
         <h2 style="font-size:clamp(24px,3.8vw,32px)">사장님의 보장, 이렇게 다시 봅니다</h2></div>
       <ol>
-        <li><b>현재 보장 전체 진단</b><span>화재·배상책임·가족건강 등 가입 중인 보장을 한눈에 정리합니다.</span></li>
-        <li><b>AI·통계로 데이터 분석</b><span>통계상 필요한 보장인지, 소득 대비 과한 보험료는 아닌지 데이터로 보여드립니다.</span></li>
-        <li><b>거품 정리 · 보장 보강</b><span>불필요한 적립·거품은 줄이고, 진짜 필요한 보장만 채워 재배치합니다.</span></li>
-        <li><b>증권사 협업 노후 매칭</b><span>국민연금 외에 보험·증권 상품을 적절한 비율로 함께 설계합니다.</span></li>
+        <li><b>사업장 · 보험 현황 진단</b><span>화재 위험, 재고 규모, 현재 보험 구조를 분석합니다.</span></li>
+        <li><b>AI 보장분석</b><span>건강 통계와 현재 가입 내용을 비교해 과한 부분과 부족한 부분을 데이터로 확인합니다.</span></li>
+        <li><b>리스크 재설계</b><span>사업장, 건강, 생활자금 구조를 점검합니다.</span></li>
+        <li><b>노후 설계 및 사후관리</b><span>증권사 협업을 통해 노후 자금 계획과 정기 점검을 진행합니다.</span></li>
       </ol>
     </div>
   </section>
@@ -365,7 +466,7 @@
       </div>
 
       <form id="leadForm" novalidate>
-        <input type="hidden" name="track" id="trackField" value="전문직/법인" />
+        <input type="hidden" name="track" id="trackField" value="전문직" />
         <!-- 스팸 방지용 허니팟 (사람에게 보이지 않음) -->
         <div class="hp" aria-hidden="true">
           <label>회사명을 비워두세요<input type="text" name="company_hp" tabindex="-1" autocomplete="off" /></label>
@@ -426,11 +527,11 @@
     <div class="ftop">
       <div>
         <div class="fb">AIA <b>윤미현</b> 마스터플래너 · 프리미어파트너스 청담본부</div>
-        <div class="fcontact">Tel. 010-6693-1936 · 2005년부터 한 자리에서</div>
+        <div class="fcontact">Tel. 010-6693-1936 · 20년 이상 자산관리 경력 보유</div>
       </div>
       <div class="foot-card imgslot">
-        <div class="ph"><code>card.jpg</code></div>
-        <img src="assets/img/card.jpg" alt="윤미현 명함" onerror="this.style.display='none'" />
+        <div class="ph"><code>card.png</code></div>
+        <img src="assets/img/card.png" alt="윤미현 마스터플래너 명함" onerror="this.style.display='none'" />
       </div>
     </div>
     <div class="legal">
