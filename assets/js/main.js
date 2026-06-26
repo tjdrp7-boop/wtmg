@@ -41,8 +41,9 @@
     if (trackField) trackField.value = TRACKS[track].label;
     if (firstInterest) firstInterest.checked = true;
     if (doScroll) {
-      var p = document.getElementById('principle');
-      if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // 선택한 분야의 본문 섹션으로 바로 이동 → "클릭했는데 안 바뀐" 느낌 제거
+      var target = TRACKS[track].el || document.getElementById('principle');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
@@ -126,4 +127,32 @@
         showError('전송에 실패했습니다. 잠시 후 다시 시도하시거나 010-6693-1936으로 연락 주세요.');
       });
   });
+
+  /* ---------- 명함 확대 라이트박스 ---------- */
+  var footCard = document.getElementById('footCard');
+  var lightbox = document.getElementById('cardLightbox');
+  if (footCard && lightbox) {
+    var lbClose = lightbox.querySelector('.lb-close');
+    function openLightbox() {
+      lightbox.classList.add('show');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (lbClose) lbClose.focus();
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      footCard.focus();
+    }
+    footCard.addEventListener('click', openLightbox);
+    if (lbClose) lbClose.addEventListener('click', closeLightbox);
+    // 배경(이미지 바깥) 클릭 시 닫기
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+    });
+  }
 })();
